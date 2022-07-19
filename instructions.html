@@ -18,9 +18,15 @@
         crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Sans:wght@800&family=Lato:wght@700&family=Nunito+Sans:wght@800&family=Rubik+Moonrocks&display=swap');
 
         * {
             font-family: 'Poppins', sans-serif;
+        }
+
+        .fontinstyle {
+            font-family: 'Audiowide', cursive;
+
         }
     </style>
 
@@ -35,8 +41,11 @@
 
         <nav class="navbar navbar-expand-md navbar-dark bg-primary ">
             <div class="container">
-                <a class="navbar-brand text-uppercase" href="#"><img src="quizimg.png" alt="quizimg" width="50"
-                        height="50">Pilankalai Forane</a>
+                <a class="navbar-brand text-uppercase d-inline-flex" href="#"><img src="quizimg.png" alt="quizimg"
+                        width="50" height="50">
+                    <p class="fontinstyle fs-6 mt-2 mb-0"> Pilankalai <br><small class="ms-4 fs-6 fontinstyle">
+                            Forane</small></p>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -49,7 +58,7 @@
                             aria-label="Close"></button>
 
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body text-center">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link text-black-50" aria-current="page"
@@ -74,6 +83,51 @@
     </header>
 
 
+    <!-- body content -->
+    <div class="container">
+        <div class="container-fluid">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th class="text-center" scope="col">Instructions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="ps-5">Enter Your Name.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="ps-5">Select Your Parish.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="ps-5">Click 'START' to begin your exam.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="ps-5">Exam Timing from 8:00 pm to 8:30 pm. Please complete your exam within the alotted time period.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td class="ps-5">Do not Refresh the question page while attending your quiz exam.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td class="ps-5">Read carefully and choose the correct answer, Answer all the questions.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td class="ps-5">After answering all the questions click 'Submit'. Do not click 'Submit' before answering all the questions.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 
@@ -111,17 +165,23 @@
 
 
 
-    <footer class="bg-info fixed-bottom">
-        <div class="container d-flex justify-content-center py-3">
-            <div class="row">
 
-                <div class="col fw-light"> <small>&copy; copyright 2022</small>
 
+
+    <footer class="mt-3">
+        <div class="bg-info fixed-bottom">
+            <div class="container d-flex justify-content-center">
+                <div class="row">
+
+                    <div class="col fw-light"> <small>&copy; copyright 2022</small>
+
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </footer>
+
 
 
 
