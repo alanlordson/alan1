@@ -50,7 +50,7 @@
                             Forane</small></p>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" id="btnhide">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end w-75 h-75 rounded-bottom" tabindex="-1" id="offcanvasNavbar"
@@ -170,7 +170,7 @@
 
 
 
-    <div class="container my-5 fixed-top pt-5" id="show" style="visibility: hidden;z-index: -1;">
+    <div class="container my-5 fixed-top pt-5" id="show" style="visibility: hidden;">
         <div class="row">
             <div class="col-4 d-flex justify-content-center" style="max-height: 75vh;overflow-y:auto;">
 
@@ -304,7 +304,7 @@
                             </div>
 
                         </div>
-                       
+
                         <div class="tab-pane fade" id="question2" role="tabpanel" aria-labelledby="v-pills-profile-tab"
                             tabindex="0">Lorem ipsum, dolor sit amet
                             consectetur adipisicing elit. Expedita odit, natus
@@ -1292,6 +1292,7 @@
             if (a == b) {
                 document.getElementById("hidden").style.visibility = "hidden";
                 document.getElementById("show").style.visibility = "visible";
+                document.getElementById("btnhide").disabled = true;
                 return true;
 
             } else {
@@ -1299,6 +1300,9 @@
                 alert("please enter valid captcha");
                 document.getElementById("captcha").style.borderColor = "red";
                 document.getElementById("textshow").innerHTML = "pleaase enter valid Captcha";
+
+
+
                 return false;
             }
 
