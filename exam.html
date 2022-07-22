@@ -29,9 +29,7 @@
 
         }
     </style>
-    <script src="exam.js">
-
-    </script>
+   
 
 
     <title>QUIZ COMPETITION</title>
@@ -132,7 +130,9 @@
                             role="button" tabindex="0">&#x21bb;</small></span>
                     <input type="text" value="" aria-label="First name" class="form-control" readonly id="capt">
                     <input type="text" aria-label="Last name" class="form-control" onkeyup="keyup()" id="captcha">
+
                 </div>
+                <div class="text-warning text-center" id="textshow"></div>
 
             </div>
             <div class="d-grid gap-2 col-6 mx-auto py-3">
@@ -1292,8 +1292,9 @@
 
             } else {
                 document.getElementById("hidden").style.visibility = "visible";
-                alert("please enter valid captcha")
-
+                alert("please enter valid captcha");
+                document.getElementById("captcha").style.borderColor = "red";
+                document.getElementById("textshow").innerHTML = "pleaase enter valid Captcha";
                 return false;
             }
 
