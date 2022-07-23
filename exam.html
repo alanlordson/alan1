@@ -29,7 +29,9 @@
 
         }
     </style>
-   
+    <script src="exam.js">
+
+    </script>
 
 
     <title>QUIZ COMPETITION</title>
@@ -136,10 +138,29 @@
 
             </div>
             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                <button class="btn btn-primary" onclick="visibilitycont(); myFunction()" id="btnon" type="button"
+                <!-- <button class="btn btn-primary" onclick="visibilitycont()" id="btnon" type="button"
                     disabled>Submit
                     &amp;
-                    Start</button>
+                    Start</button> -->
+
+
+
+
+
+                <button type="button" class="btn btn-primary" onclick="visibilitycont()" id="btnon"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>
+                    Submit &amp; Start
+                </button>
+
+                <!-- Modal -->
+
+
+
+
+
+
+
+
             </div>
 
 
@@ -162,14 +183,40 @@
 
 
 
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning" id="exampleModalLabel">Warning</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li> The Exam Page Will be <b> Automatically Submited , after the 30 Minutes Over.</b></li>
+                        <li>If you finish the Exam before 30 Minutes ,you will manually enter the Submit button.</li>
+                        <li>Now, Click to the Start button to Start the Exam.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="myFunction()" class="btn btn-success"
+                        data-bs-dismiss="modal">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- exam questions -->
 
 
 
 
 
-
     <div class="container my-5 fixed-top pt-5" id="show" style="visibility: hidden;">
+
         <div class="row">
             <div class="col-4 d-flex justify-content-center" style="max-height: 75vh;overflow-y:auto;">
 
@@ -268,8 +315,7 @@
 
             <div class="col-8" style="max-height: 75vh; overflow-y:auto">
                 <fieldset>
-                    <legend class="text-info">Question : <span class="float-end" id="timer"> </span><span
-                            class="float-end">&nbsp; left &nbsp; </span></legend>
+                    <legend class="text-info">Question : <span class="float-end" id="timer"> </span></legend>
                     <div class="tab-content border border-4 rounded px-3 py-2" id="v-pills-tabContent">
 
 
@@ -1480,7 +1526,9 @@
                             </div>
                             <div class="float-end mt-4">
 
-                                <a class="btn btn-success" id="submit" href="feedback.html" role="button">Submit</a>
+                                <a class="btn btn-success text-decoration-none" href="feedback.html"
+                                    role="button"><button type="submit" class="btn btn-success"
+                                        id="submit">Submit</button></a>
                             </div>
                         </div>
                     </div>
@@ -1583,9 +1631,12 @@
                 document.getElementById("hidden").style.visibility = "hidden";
                 document.getElementById("show").style.visibility = "visible";
                 document.getElementById("btnhide").disabled = true;
-                return true;
+                // return true;
 
-            } else {
+            }
+
+
+            else {
                 document.getElementById("hidden").style.visibility = "visible";
                 alert("please enter valid captcha");
                 document.getElementById("captcha").style.borderColor = "red";
@@ -1593,11 +1644,13 @@
 
 
 
-                return false;
+                // return false;
             }
 
 
         }
+
+
 
 
 
