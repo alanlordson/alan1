@@ -138,21 +138,15 @@
 
             </div>
             <div class="d-grid gap-2 col-6 mx-auto py-3">
-                <!-- <button class="btn btn-primary" onclick="visibilitycont()" id="btnon" type="button"
-                    disabled>Submit
+                <button class="btn btn-primary" onclick="visibilitycont()" id="btnon" type="button" disabled>Submit
                     &amp;
-                    Start</button> -->
+                    Start</button>
 
 
 
 
 
-                <button type="button" class="btn btn-primary" onclick="visibilitycont()" id="btnon"
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>
-                    Submit &amp; Start
-                </button>
 
-                <!-- Modal -->
 
 
 
@@ -172,39 +166,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-warning" id="exampleModalLabel">Warning</h5>
-                </div>
-                <div class="modal-body">
-                    <ol>
-                        <li> The Exam Page Will be <b> Automatically Submited , after the 30 Minutes Over.</b></li>
-                        <li>If you finish the Exam before 30 Minutes ,you will manually enter the Submit button.</li>
-                        <li>Now, Click to the Start button to Start the Exam.</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" onclick="myFunction()" class="btn btn-success"
-                        data-bs-dismiss="modal">Start</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -1621,21 +1582,16 @@
             document.getElementById("capt").value = e;
         }
 
+
+
+
         function visibilitycont() {
 
             let a = document.getElementById("capt").value;
             let b = document.getElementById("captcha").value;
 
-            if (a == b) {
-                document.getElementById("hidden").style.visibility = "hidden";
-                document.getElementById("show").style.visibility = "visible";
-                document.getElementById("btnhide").disabled = true;
-                // return true;
+            if (a != b) {
 
-            }
-
-
-            else {
                 document.getElementById("hidden").style.visibility = "visible";
                 alert("please enter valid captcha");
                 document.getElementById("captcha").style.borderColor = "red";
@@ -1643,14 +1599,25 @@
 
 
 
-                // return false;
+
+                return false;
+
+            }
+
+
+            else {
+
+                document.getElementById("hidden").style.visibility = "hidden";
+                document.getElementById("show").style.visibility = "visible";
+                document.getElementById("btnhide").disabled = true;
+                myFunction();
+
+
+                return true;
             }
 
 
         }
-
-
-
 
 
         function myFunction() {
