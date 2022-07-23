@@ -29,9 +29,7 @@
 
         }
     </style>
-    <script src="exam.js">
-
-    </script>
+   
 
 
     <title>QUIZ COMPETITION</title>
@@ -1482,7 +1480,7 @@
                             </div>
                             <div class="float-end mt-4">
 
-                                <a class="btn btn-success" href="#" role="button">Submit</a>
+                                <a class="btn btn-success" id="submit" href="feedback.html" role="button">Submit</a>
                             </div>
                         </div>
                     </div>
@@ -1619,9 +1617,16 @@
 
                 seconds = seconds < 10 ? '0' + seconds : seconds;
 
-
+                t = `${minutes}: ${seconds}`;
                 // countdown.innerHTML = `${minutes}: ${seconds}`;
-                document.getElementById("timer").innerHTML = `${minutes}: ${seconds}`;
+                document.getElementById("timer").innerHTML = t;
+
+                if (t == "0: 00") {
+                    document.getElementById("submit").click()
+
+                }
+
+
 
 
 
