@@ -19,7 +19,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Sans:wght@800&family=Lato:wght@700&family=Nunito+Sans:wght@800&family=Rubik+Moonrocks&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Concert+One&family=Fira+Sans:wght@800&family=Lato:wght@700&family=Nunito+Sans:wght@800&family=Rubik+Moonrocks&display=swap');
         * {
             font-family: 'Poppins', sans-serif;
         }
@@ -28,8 +28,49 @@
             font-family: 'Audiowide', cursive;
 
         }
+        .greetingfont{
+            font-family: 'Concert One', cursive;
+        }
     </style>
+    <script>
+        function showdiv() {
 
+let a = new Date();
+
+let b = a.getHours();
+
+
+
+if (b >= 0 && b <= 11) {
+    
+    document.getElementById("wish").innerHTML = "Good Morning";
+
+
+    
+
+} else if (b >= 12 && b <= 15) {
+    document.getElementById("wish").innerHTML = "Good AfterNoon";
+
+    
+
+} else {
+    document.getElementById("wish").innerHTML = "Good Evening";
+
+    
+}
+}
+
+setTimeout("showdiv()", 1000);
+
+
+// document.getElementById("wish").innerHTML = b;
+function hidediv() {
+document.getElementById("wish").style.display="none";
+
+}
+
+setTimeout("hidediv()", 4000);
+    </script>
 
     <title>QUIZ COMPETITION</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -74,16 +115,24 @@
                                 <a class="nav-link text-black" href="#">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-black" href="about.html">About</a>
+                                <a class="nav-link text-black" href="#">About</a>
                             </li>
                         </ul>
                         <div class="offcanvas-header mt-5">
-                            <img src="quizimg.png" alt="" class="offcanvas-title text-primary img-fluid rounded mx-auto d-block" width="150" height="150" id="offcanvasNavbarLabel">
+                            <img src="quizimg.png" alt=""
+                                class="offcanvas-title text-primary img-fluid rounded mx-auto d-block" width="150"
+                                height="150" id="offcanvasNavbarLabel">
                         </div>
                     </div>
                 </div>
         </nav>
     </header>
+
+
+
+    <div class="container">
+        <div class="text-center fs-4 fw-bold text-warning greetingfont" id="wish"></div>
+    </div>
 
     <div class="container my-2">
         <div class="row">
