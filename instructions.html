@@ -16,9 +16,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3773696773355397"
-
-     crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Sans:wght@800&family=Lato:wght@700&family=Nunito+Sans:wght@800&family=Rubik+Moonrocks&display=swap');
@@ -90,78 +87,89 @@
         </nav>
     </header>
 
-
     <!-- body content -->
+    <div id="spinhide">
 
-    <div class="container bg-secondary my-2 py-1 text-center">
-        <div class="row">
-            <div class="col"><b>Read the Instructions carefully.</b></div>
+        <div class="container bg-secondary my-2 py-1 text-center">
+            <div class="row">
+                <div class="col"><b>Read the Instructions carefully.</b></div>
 
-        </div>
-
-    </div>
-
-
-
-    <div class="container bg-light">
-        <div class="container-fluid">
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th class="text-center" scope="col">Instructions</th>
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td class="ps-5">Enter Your Name.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td class="ps-5">Select Your Parish.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td class="ps-5">Click 'START' to begin your exam.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td class="ps-5">Exam Timing from 8:00 pm to 8:30 pm. Please complete your exam within the
-                            alotted time period.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td class="ps-5">Do not Refresh the question page while attending your quiz exam.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td class="ps-5">Read carefully and choose the correct answer, Answer all the questions.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td class="ps-5">After answering all the questions click 'Submit'. Do not click 'Submit' before
-                            answering all the questions.</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="offset-1 col-10"> Let's Start</div>
-            <a href="http://alantest.epizy.com/exam.php" class="text-decoration-none">
-                <div class="offset-1 col-10"><button type="button" class="btn btn-success btn-sm">Go To Exam</button>
-                </div>
-            </a>
+            </div>
 
         </div>
 
+
+
+        <div class="container bg-light">
+            <div class="container-fluid">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th class="text-center" scope="col">Instructions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="ps-5">Enter Your Name.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="ps-5">Select Your Parish.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="ps-5">Click 'START' to begin your exam.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="ps-5">Exam Timing from 8:00 pm to 8:30 pm. Please complete your exam within the
+                                alotted time period.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="ps-5">Do not Refresh the question page while attending your quiz exam.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="ps-5">Read carefully and choose the correct answer, Answer all the questions.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td class="ps-5">After answering all the questions click 'Submit'. Do not click 'Submit'
+                                before
+                                answering all the questions.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="offset-1 col-10"> Let's Start</div>
+                <a href="exam.html" class="text-decoration-none">
+                    <div class="offset-1 col-10"><button type="button" onclick="show()" class="btn btn-success btn-sm">Go To
+                            Exam</button>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
     </div>
 
+    <div class="container" id="spinshow" style="display:none;">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -190,7 +198,14 @@
 
 
 
+<script>
+function show() {
+    document.getElementById("spinhide").style.display = "none"
+      document.getElementById("spinshow").style.display = "visible"
 
+}
+
+</script>
 
 
 
