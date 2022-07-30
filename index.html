@@ -46,7 +46,7 @@
     <header class="sticky-top">
 
 
-       <nav class="navbar navbar-expand-md navbar-dark" style="box-shadow: 0px 2px 6px rgb(167, 169, 182); background-color: rgb(100, 100, 190);">
+        <nav class="navbar navbar-expand-md navbar-dark" style="box-shadow: 0px 2px 6px rgb(167, 169, 182); background-color: rgb(100, 100, 190);">
             <div class="container">
                 <a class="navbar-brand text-uppercase d-inline-flex lh-1 shadow-lg ps-4 pe-5" style="border-top-right-radius: 90rem; border-bottom-left-radius: 90rem; border-bottom-right-radius: 50rem; background-color: rgb(79, 63, 184);" href="#"><img src="quizimg.png" alt="quizimg"
                         width="40" height="40">
@@ -75,7 +75,7 @@
                                 <a class="nav-link text-black" href="instructions.html">Instructions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-black" href="https://alantest.epizy.com/exam.php">Exam</a>
+                                <a class="nav-link text-black" href="exam.html">Exam</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-black" href="contactus.html">Contact Us</a>
@@ -258,7 +258,45 @@
 
 
 
+<script>
+    function showdiv() {
 
+let a = new Date();
+
+let b = a.getHours();
+
+
+
+if (b >= 0 && b <= 11) {
+    
+    document.getElementById("wish").innerHTML = "Good Morning";
+
+
+    
+
+} else if (b >= 12 && b <= 15) {
+    document.getElementById("wish").innerHTML = "Good AfterNoon";
+
+    
+
+} else {
+    document.getElementById("wish").innerHTML = "Good Evening";
+
+    
+}
+}
+
+setTimeout("showdiv()", 1000);
+
+
+// document.getElementById("wish").innerHTML = b;
+function hidediv() {
+document.getElementById("wish").style.display="none";
+
+}
+
+setTimeout("hidediv()", 3000);
+</script>
 
 
 
